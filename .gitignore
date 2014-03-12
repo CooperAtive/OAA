@@ -1,4 +1,6 @@
 lib-cov/
+=======
+lib-cov
 *.seed
 *.log
 *.csv
@@ -19,3 +21,9 @@ build/
 dist/
 app/bower_components/
 .sass-cache/
+pids
+logs
+results
+
+npm-debug.log
+node_modules

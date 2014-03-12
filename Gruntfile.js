@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-simple-mocha');
   grunt.loadNpmTasks('grunt-contrib-watch');
+<<<<<<< HEAD
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -84,6 +85,14 @@ module.exports = function(grunt) {
     simplemocha: {
       dev:{
         src:['test/*_test.js','!test/acceptance/*_test.js'],
+=======
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  grunt.initConfig({
+    simplemocha:{
+      dev:{
+        src:['test/**/*_test.js'],
+>>>>>>> 1fc3fccdc5aa8521c58e0d346890199d8f480617
         options:{
           reporter: 'spec',
           slow: 200,
@@ -91,6 +100,7 @@ module.exports = function(grunt) {
         }
       }
     },
+<<<<<<< HEAD
     watch: {
       all: {
         files:['app.js', '**/*.js' ],
@@ -114,6 +124,12 @@ module.exports = function(grunt) {
         files : {
           'test/acceptance/casper-results.xml' : ['test/acceptance/*_test.js']
         }
+=======
+    watch:{
+      all:{
+        files:['app.js', 'models/*.js'],
+        tasks:['jshint', 'test']
+>>>>>>> 1fc3fccdc5aa8521c58e0d346890199d8f480617
       }
     },
     jshint: {
@@ -125,6 +141,7 @@ module.exports = function(grunt) {
           module: true
         }
       }
+<<<<<<< HEAD
     },
     sass: {
       dist: {
@@ -146,5 +163,12 @@ module.exports = function(grunt) {
   grunt.registerTask('server', [ 'build:dev', 'express:dev','watch:express' ]);
   grunt.registerTask('test:acceptance',['express:dev','casper']);
   grunt.registerTask('default', ['jshint', 'test','watch:express']);
+=======
+    }
+  });
+
+  grunt.registerTask('test', 'simplemocha:dev');
+  grunt.registerTask('watch', 'test, watch:all');
+>>>>>>> 1fc3fccdc5aa8521c58e0d346890199d8f480617
 
 };
