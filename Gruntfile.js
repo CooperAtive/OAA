@@ -9,7 +9,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-casper');
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -132,8 +132,8 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          includePaths: ['public/scss/'],
-          sourceComments: 'map'
+          includePaths: ''//['public/scss/'],
+          //sourceComments: 'map'
         },
         files: {'build/css/styles.css': 'assets/scss/styles.scss'}
       }
