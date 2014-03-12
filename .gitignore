@@ -1,5 +1,3 @@
-lib-cov/
-=======
 lib-cov
 *.seed
 *.log
@@ -19,7 +17,7 @@ test/acceptance/*-results.xml
 
 build/
 dist/
-app/bower_components/
+bower_components/
 .sass-cache/
 pids
 logs
