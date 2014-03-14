@@ -1,6 +1,6 @@
 'use strict';
 
-var Backbone = require('Backbone');
+var Backbone = require('backbone');
 var _ = require('underscore');
 
 module.exports = Backbone.View.extend({
@@ -14,6 +14,6 @@ module.exports = Backbone.View.extend({
 
     render: function() {
         var attributes = this.model.toJSON();
-        this.$el.html(this.temlplate(attribites));
+        this.$el.html(this.temlplate(attributes));
     }
 });

@@ -1,9 +1,9 @@
 'use strict';
 
 var Backbone = require('backbone');
-var User = requore('./User');
+var User = require('./User');
 
 module.exports = Backbone.Collection.extend({
     model: User,
-    url: 'http://localhost:3000/api/v1/users'
+    url: 'http://coopert-90969.usw1-2.nitrousbox.com/api/v1/users'
 });

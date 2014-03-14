@@ -11,5 +11,10 @@ var UserRouter = require('./routers/UserRouter');
 
 $(function() {
     var userRouter = new UserRouter;
-    $(function(){userRoutes.start()})
+    userRouter.start();
 });
+
+
+//$(function(){
+//    userRouter.start();
+//});
