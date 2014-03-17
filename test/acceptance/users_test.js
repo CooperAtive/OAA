@@ -5,7 +5,7 @@
 
 casper.test.begin('user', 3, function suite(test) {
 
-    casper.start('https://localhost:3000#users', function() {
+    casper.start('http://coopert-90969.usw1-2.nitrousbox.com/#users', function() {
         test.assertHttpStatus(200);
     });
 

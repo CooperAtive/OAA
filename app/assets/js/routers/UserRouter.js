@@ -9,20 +9,20 @@ var $          = require('jquery');
 module.exports = Backbone.Router.extend({
     routes: {'users/:id': 'show',
              'users': 'index' },
+
+    initialize: function(){
+        this.userList = new UserCollection();
+        console.log(this.userList);
+        this.userListView = new UserCollectionView({collection: this.userList});
+    },
+
     show: function(id){
-        //stretch goal here
+        console.log(id);
     },
 
     index: function(){
         this.userList.fetch();
-        console.log(this.userList);
-        console.log(this.userListView.el);
-        $('.container').replaceWith(this.userListView.el);
-    },
-
-    initialize: function(){
-        this.userList = new UserCollection();
-        this.userListView = new UserCollectionView({collection: this.userList});
+        $('.mainContent').replaceWith(this.userListView.el);
     },
 
     start: function(){

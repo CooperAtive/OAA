@@ -10,11 +10,6 @@ Backbone.$      = $;
 var UserRouter = require('./routers/UserRouter');
 
 $(function() {
-    var userRouter = new UserRouter;
+    var userRouter = new UserRouter();
     userRouter.start();
 });
-
-
-//$(function(){
-//    userRouter.start();
-//});
